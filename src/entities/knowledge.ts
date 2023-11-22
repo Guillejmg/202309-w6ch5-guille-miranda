@@ -1,6 +1,6 @@
 export type KnowledgeStructure ={
   
-  id: number;
+  id: string;
   name: string;
   week: number;
   learned: boolean;

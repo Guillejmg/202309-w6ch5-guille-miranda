@@ -1,10 +1,11 @@
-import { KnowledgeStructure } from "../entities/knowledge";
-import { Repository } from "./repo";
-import { HttpError } from "../types/http.error";
+import { KnowledgeStructure } from "../../entities/knowledge";
+import { Repository } from "../repo";
+import { HttpError } from "../../types/http.error";
 import { SubjetModel } from "./subjets.mongo.model";
 
 export class SubjetsMongoRepo implements Repository<KnowledgeStructure>{
 
+  userRepo: UserMongoRepo
 constructor(){
 
 }
@@ -15,11 +16,15 @@ constructor(){
   }
 
   async getById(id: number): Promise<KnowledgeStructure> {
-    const result = SubjetModel.findById(id);
+    const result = SubjetModel.findById(id).exec();
     return result;//como puede ser null en vez de id hay que ponerle el httperror e igual para los siguientes
   }
 
   async create(newItem: Omit<KnowledgeStructure, "id">): Promise<KnowledgeStructure> {
+
+    this.userRepo.getById(newItem.author.id)// Aqui si hubiese algun error se dispararia ya en el controller
+    newItem.author.notes.push(result)
+
     const result: KnowledgeStructure = await SubjetModel.create(newItem)
     return result;
   }

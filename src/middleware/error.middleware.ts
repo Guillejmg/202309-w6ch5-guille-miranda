@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { HttpError } from 'http-errors'
 import createDebug from 'debug';
-import RangeError from 'mongoose'
+import mongoose, {Error} from 'mongoose';
 const debug = createDebug('W7E:error:middleware');
 
 debug('Starting');
@@ -22,14 +22,15 @@ if (error instanceof HttpError){
 }else if(error instanceof Error.ValidationError){
   res.status(400);
   res.statusMessage = 'Bad Request';
-}
-else{//voy reyenando y el ultimo es solo else por que saltara en cualquier otro caso no incluido
+}else if (error instanceof mongoose.mongo.MongoServerError) {
+  res.status(406);
+  res.statusMessage = 'Not accepted';
+}else{ // Voy reyenando y el ultimo es solo else por que saltará en cualquier otro caso no incluido
   res.status(500)
   res.statusMessage = 'Internal Server Error'
 }
 
- /* Res.status((error as HttpError).status);
-  res.statusMessage = (error as HttpError).statusMessage; */
   res.json({});
-  debug((error as HttpError).message);
+  debug((error as Error).name);
+  debug((error as Error).message);
 };

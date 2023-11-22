@@ -1,0 +1,24 @@
+{"Manual":
+  [
+    {
+  
+      "id": "0",
+      "subject": "JavaScript",
+      "topic": "Numbers",
+      "description": "Data type in JS",
+      "notes": "whatever you took with Alejandro",
+      "pictures": "path/blabla..."
+      
+    },
+    {
+  
+      "id": "1",
+      "subject": "JavaScript",
+      "topic": "String",
+      "description": "Data type in JS",
+      "notes": "whatever you took with Alejandro",
+      "pictures": "path/blabla..."
+      
+    }
+  ]
+}

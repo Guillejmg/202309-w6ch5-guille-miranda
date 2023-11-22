@@ -1,6 +1,7 @@
-/* Import { Request, Response } from 'express';
+/* Import { Request, Response, NextFunction } from 'express';
 import { KnowledgeList } from './controller';
 import { SubjetsFileRepo } from '../repos/subjets.file.repo';
+import {}
 
 describe('Given TasksController class', () => {
   describe('When we instantiate it', () => {
@@ -55,7 +56,7 @@ describe('Given TasksController class', () => {
         json: jest.fn(),
       } as unknown as Response;
       await beerController.create(req, res);
-      expect(res.json).toHaveBeenCalled(/* expected result );
+      expect(res.json).toHaveBeenCalled( expected result );
     });
     test('The should update a beer...', async () => {
       const beerController = new BeerController();
@@ -72,20 +73,20 @@ describe('Given TasksController class', () => {
       await beerController.update(req, res);
       expect(res.json).toHaveBeenCalledWith({ id: 1, name: 'Updated Beer' });
     });
-    // Test('Then delete should...', async () => {
-    //   const beerController = new BeerController();
-    //   const req = { params: { id: 1 } } as unknown as Request;
-    //   const res = {
-    //     status: jest.fn().mockReturnThis(),
-    //     json: jest.fn(),
-    //     statusMessage: '',
-    //   } as unknown as Response;
-    //   const next = jest.fn();
-    //   await beerController.delete(req, res, next);
-    //   expect(res.status).toHaveBeenCalledWith(204);
-    //   expect(res.json).toHaveBeenCalledWith({});
-    //   expect(next).not.toHaveBeenCalled();
-    // });
+  Test('Then delete should...', async () => {
+    const beerController = new BeerController();
+    const req = { params: { id: 1 } } as unknown as Request;
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+      statusMessage: '',
+    } as unknown as Response;
+    const next = jest.fn();
+    await beerController.delete(req, res, next);
+    expect(res.status).toHaveBeenCalledWith(204);
+    expect(res.json).toHaveBeenCalledWith({});
+    expect(next).not.toHaveBeenCalled();
+  });
   });
 });
 */

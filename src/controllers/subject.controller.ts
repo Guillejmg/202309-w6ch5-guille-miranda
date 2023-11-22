@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import createDebug from 'debug';
-import { SubjetsFileRepo } from '../repos/subjets.file.repo';
+import { SubjetsFileRepo } from '../repos/files/subjets.file.repo';
 
 const debug = createDebug('W7E:subjects:file:repo')
 

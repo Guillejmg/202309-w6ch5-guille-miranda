@@ -1,7 +1,7 @@
-import { KnowledgeStructure } from "../entities/knowledge";
-import { Repository } from "./repo";
+import { KnowledgeStructure } from "../../entities/knowledge";
+import { Repository } from "../repo";
 import  fs from 'fs/promises'
-import { HttpError } from "../types/http.error";
+import { HttpError } from "../../types/http.error";
 import createDebug from 'debug';
 
 

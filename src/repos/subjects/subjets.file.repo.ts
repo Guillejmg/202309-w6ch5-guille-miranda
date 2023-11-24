@@ -1,4 +1,4 @@
-import { KnowledgeStructure } from "../../entities/knowledge";
+import { KnowledgeStructure } from "../../entities/campero";
 import { Repository } from "../repo";
 import  fs from 'fs/promises'
 import { HttpError } from "../../types/http.error";

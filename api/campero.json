@@ -1,0 +1,116 @@
+{"Produccion":[
+
+  { 
+    
+  "id": "0",
+  "order": 0,
+  "campero": "mixto",
+  "ingredients": ["pollo"],
+  "dip":"mayonesa",
+  "extra": "patatas",
+  "delivered": false,
+  "image": "path/..."
+  
+  },
+  
+  {
+  
+  "id": "1",
+  
+  "order": 1,
+  
+  "campero": 1,
+  
+  "ingredients": ["pollo"],
+  
+  "dip":"mayonesa",
+  
+  "extra": "patatas",
+  
+  "delivered": false,
+  
+  "image": "path/..."
+  
+  },
+  
+  {
+  
+  "id": "2",
+  
+  "order": 2,
+  
+  "campero": 1,
+  
+  "ingredients": ["pollo"],
+  
+  "dip":"mayonesa",
+  
+  "extra": "patatas",
+  
+  "delivered": false,
+  
+  "image": "path/..."
+  
+  },
+  
+  {
+  
+  "id": "3",
+  
+  "order": 3,
+  
+  "campero": 3,
+  
+  "ingredients": ["pollo"],
+  
+  "dip":"mayonesa",
+  
+  "extra": "patatas",
+  
+  "delivered": false,
+  
+  "image": "path/..."
+  
+  },
+  
+  {
+  
+  "id": "4",
+  
+  "order": 4,
+  
+  "campero": 4,
+  
+  "ingredients": ["pollo"],
+  
+  "dip":"mayonesa",
+  
+  "extra": "patatas",
+  
+  "delivered": false,
+  
+  "image": "path/..."
+  
+  },
+  
+  {
+  
+  "id": "6",
+  
+  "order": 5,
+  
+  "campero": 6,
+  
+  "ingredients": ["pollo"],
+  
+  "dip":"mayonesa",
+  
+  "extra": "patatas",
+  
+  "delivered": false,
+  
+  "image": "path/..."
+  
+  }
+  
+  ]}

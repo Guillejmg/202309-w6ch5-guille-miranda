@@ -3,21 +3,23 @@
     {
   
       "id": "0",
-      "subject": "JavaScript",
-      "topic": "Numbers",
-      "description": "Data type in JS",
-      "notes": "whatever you took with Alejandro",
-      "pictures": "path/blabla..."
+      "employee": "guille",
+      "name": "mixto",
+      "ingredients": ["jamon","queso"],
+      "description": "porduccion",
+      "notes": "observaciones",
+      "onMenu": false
       
     },
     {
   
       "id": "1",
-      "subject": "JavaScript",
-      "topic": "String",
-      "description": "Data type in JS",
-      "notes": "whatever you took with Alejandro",
-      "pictures": "path/blabla..."
+      "employee": "guille",
+      "name": "serrano",
+      "ingredients": ["jamon","queso"],
+      "description": "porduccion",
+      "notes": "observaciones",
+      "onMenu": false
       
     }
   ]

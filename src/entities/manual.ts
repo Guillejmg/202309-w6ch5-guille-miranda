@@ -1,10 +1,13 @@
+import { User } from "./user";
+
 export type ManualStructure ={
   
-  id: string;
-  subject: string;
-  topic: string; 
-  description: string;
-  notes: string;
-  pictures: string;
+ id: string;
+ employee: User;
+ name: string;
+ ingredients: string;
+ description: string;
+ notes: string;
+ onMenu: boolean;
   
 }

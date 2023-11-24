@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import createDebug from 'debug';
-import { SubjetsFileRepo } from '../repos/files/subjets.file.repo';
+import { SubjetsFileRepo } from '../repos/subjects/subjets.file.repo';
+import { Auth } from '../services/auth';
+import { HttpError } from '../types/http.error';
 
 const debug = createDebug('W7E:subjects:file:repo')
 
@@ -24,8 +26,20 @@ async getById(req: Request, res: Response, next: NextFunction){
     next(error)
   }
 }
+
+async search(req: Request)
   
 async create(req: Request, res: Response){
+
+  const tokenHeader = req.get('Authoritation');
+  if(!tokenHeader?.startsWith('Bearer')) 
+  throw HttpError(401, 'Unauthorized');
+const token = tokenHeader.split(' ')[1]// aislamos el tokken de la construccion del header
+const tokenPayload = Auth.verifyAndGetPayload(token);
+req.body.id = tokenPayload.id;//reescribo con el tokken el del bodi por que alguien lo podria haber manipulado, por lo tantto me fio mas del que viene con el tokken
+
+
+  
     const result = await this.repo.create(req.body);
     res.status(201);
     res.statusMessage = 'created';

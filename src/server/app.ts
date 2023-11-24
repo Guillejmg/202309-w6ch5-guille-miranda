@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express'
 import morgan from 'morgan';
-import { checkListRouter } from '../routers/router.check.list.js';
+import { manualRouter } from '../routers/manual.router.js';
 import { errorMiddleware } from '../middleware/error.middleware.js';
 import createDebug from 'debug';
 
@@ -16,7 +16,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use('/knowledge', checkListRouter);
+app.use('/manual', manualRouter);
 app.use('/users', userRouter);
 
 app.use(errorMiddleware);
